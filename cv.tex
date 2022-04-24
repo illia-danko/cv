@@ -1,0 +1,161 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Elijah Danko}
+\tagline{Senior Software Engineer}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{MainPersonal.png}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{me@elijahdanko.net}
+  \phone{+48-538-941-416}
+  \mailaddress{Trzesiecka 70, Street, 78-400 Poland}
+  \location{Szczecinek, PL}
+  \homepage{elijahdanko.net}
+  \linkedin{elijah-danko-608486bb}
+  \github{elijahdanko}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+\cvsection{Summary}
+Overall more than seven years of working experience in the field. Have
+participated in a various range of technologies and languages including C, C++,
+Java, Clojure, Javascript and Python. The last couple of years, my niche is the
+Web, and Golang, in particular. Strongly focused on a business side, but also
+consider to contribute further back to Open Source.
+
+\cvsection{Experience}
+\cvevent{Senior Software Engineer}{Aigent}{Dec 2019 -- Ongoing}{Amsterdam, NL}
+\begin{itemize}
+\item Troubleshooting high performing components.
+\item Design, develop and maintain services and internal tools.
+\item Refine existing parts.
+\item Collaboration with clients.
+\end{itemize}
+\divider
+
+\cvevent{Senior Software Engineer}{Omnisend}{Feb 2018 -- Dec 2019}{Lviv, UA}
+\begin{itemize}
+\item Design, develop and maintain high performing services.
+\item Write unit, acceptance and e2e tests.
+\end{itemize}
+\divider
+
+\cvevent{Senior Test Engineer}{Here}{Jun 2017 -- Feb 2018}{Lviv, UA}
+\begin{itemize}
+\item Design and develop integration testing framework.
+\item Implement and maintain integration tests.
+\end{itemize}
+\divider
+
+\cvevent{Middle Software Engineer}{Cisco}{Nov 2015 –- Jun 2017}{Lviv, UA}
+\begin{itemize}
+\item Develop and maintain gateway systems for embedded devices.
+\item Develop and maintain primitive components and drivers, such as, VOIP, IPTV, VPN.
+\item Write user guides and other technical documentations.
+\item Maintain and extend the testing framework solution with tests.
+\end{itemize}
+\divider
+
+\cvevent{Junior Software Engineer}{Inside Secure}{Jul 2013 –- Nov 2015}{Lviv, UA}
+\begin{itemize}
+\item Develop and maintain a stereotyped simulator for credit card vendors.
+\item Write and maintain integration tests.
+\end{itemize}
+
+
+\cvsection{Tech Stack}
+
+
+% \divider\smallskip
+
+\cvevent{General Purpose Languages}{}{}{}
+
+\cvtag{Golang} \cvtag{C} \cvtag{Javascript} \cvtag{Clojure} \cvtag{Python} \cvtag{C++} \cvtag{Java}
+
+\divider
+
+\cvevent{Domain Specific Languages}{}{}{}
+
+\cvtag{Shell sh and bash} \cvtag{Makefile} \cvtag{CMake} \cvtag{Javascript} \cvtag{SQL} \cvtag{MongoDB} \cvtag{VimL} \cvtag{ELisp} \cvtag{\LaTeX{}} \cvtag{HTML} \cvtag{Edn} \cvtag{Protobuf}
+
+\cvsection{Languages}
+\cvskill{English}{5}
+\divider
+
+\cvskill{Ukrainian}{5}
+\divider
+
+\cvsection{Education}
+
+\cvevent{Bachelor of Economics}{Volodymyr Dahl East Ukrainian National University}{Sep 2010 -- Jun 2013}{}
+
+\end{document}
