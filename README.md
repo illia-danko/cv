@@ -9,6 +9,10 @@ Libraries:
 - texlive-fonts-extra
 - texlive-latex-extra
 
+For Mac:
+
+- brew install bibtex texlive
+
 # Build pdf
 
 - `pdflatex cv.tex`
